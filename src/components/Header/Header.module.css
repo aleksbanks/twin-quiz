@@ -1,0 +1,47 @@
+.header {
+  height: 114px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 43px;
+  letter-spacing: -4px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0;
+  font-weight: normal;
+}
+
+.dot {
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.letter {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 650px) {
+  .header {
+    height: 80px;
+  }
+
+  .wordmark {
+    font-size: 36px;
+  }
+}

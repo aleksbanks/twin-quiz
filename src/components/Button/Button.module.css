@@ -1,0 +1,48 @@
+.button {
+  font: inherit;
+}
+
+.primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 0;
+  border-radius: 9px;
+  padding: 17px 20px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  min-height: 51px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.secondary {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 13px 20px;
+  background: transparent;
+  margin: 15px auto;
+  color: var(--ink);
+}
+
+@media (max-width: 950px) {
+  .primary {
+    justify-content: space-between;
+  }
+}

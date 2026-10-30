@@ -1,0 +1,220 @@
+.welcome {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 35px;
+  min-height: 650px;
+  padding: 55px 0 75px;
+}
+
+.tinyStar {
+  color: var(--accent);
+  display: inline-flex;
+}
+
+.intro h1 {
+  font-family: 'Manrope', Arial, sans-serif;
+  letter-spacing: -4.5px;
+  line-height: 1.06;
+  font-size: clamp(50px, 5.8vw, 78px);
+  font-weight: 500;
+  margin: 26px 0;
+}
+
+.intro h1 i {
+  font-family: Georgia, serif;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.introCopy {
+  font-size: 15px;
+  line-height: 1.85;
+  max-width: 365px;
+  color: var(--muted);
+  margin: 25px 0 34px;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 11px;
+}
+
+.nameRow {
+  display: flex;
+  gap: 8px;
+  max-width: 460px;
+}
+
+.input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: transparent;
+  padding: 16px;
+  border-radius: 9px;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.micro {
+  font-size: 10px;
+  letter-spacing: 0.3px;
+  color: var(--muted);
+  margin-top: 17px;
+}
+
+.visual {
+  position: relative;
+  height: 450px;
+}
+
+.scribble {
+  position: absolute;
+  color: var(--violet);
+  display: inline-flex;
+  top: -8px;
+  right: 32px;
+  transform: rotate(12deg);
+}
+
+.sticker {
+  position: absolute;
+  z-index: 3;
+  left: 4px;
+  bottom: 28px;
+  background: var(--violet);
+  border-radius: 50%;
+  width: 118px;
+  height: 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.55;
+  transform: rotate(-14deg);
+  border: 1px solid var(--violet-hover);
+  box-shadow: 0 3px 0 var(--violet-hover);
+  color: #fff;
+}
+
+.sticker b {
+  font-size: 12px;
+}
+
+.visualNote {
+  position: absolute;
+  bottom: -10px;
+  left: 85px;
+  right: 0;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--muted);
+}
+
+@media (min-width: 1400px) {
+  .welcome {
+    min-height: 710px;
+  }
+}
+
+@media (max-width: 950px) {
+  .welcome {
+    gap: 15px;
+  }
+
+  .visual {
+    transform: scale(0.85);
+    transform-origin: center center;
+  }
+
+  .intro h1 {
+    font-size: 58px;
+  }
+
+  .nameRow {
+    flex-direction: column;
+    max-width: 310px;
+  }
+
+  .visualNote {
+    left: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 45px;
+    gap: 10px;
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  .intro h1 {
+    font-size: 53px;
+    letter-spacing: -3px;
+    margin: 20px 0;
+  }
+
+  .introCopy {
+    font-size: 14px;
+    line-height: 1.75;
+    max-width: 100%;
+    margin: 20px 0 24px;
+  }
+
+  .nameRow {
+    max-width: none;
+    flex-direction: row;
+  }
+
+  .startButton {
+    gap: 12px;
+    padding: 15px;
+    font-size: 11px;
+  }
+
+  .visual {
+    height: 320px;
+    max-width: 360px;
+    width: 100%;
+    margin: 10px auto 0;
+    transform: none;
+  }
+
+  .scribble {
+    right: 20px;
+    top: -12px;
+  }
+
+  .scribble svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .sticker {
+    height: 88px;
+    width: 88px;
+    left: -6px;
+    bottom: 12px;
+    font-size: 8px;
+  }
+
+  .sticker b {
+    font-size: 8px;
+  }
+
+  .visualNote {
+    bottom: -3px;
+    left: 0;
+    font-size: 13px;
+  }
+}

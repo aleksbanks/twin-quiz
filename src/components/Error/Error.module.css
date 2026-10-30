@@ -1,0 +1,17 @@
+.error {
+  max-width: 800px;
+  background: var(--violet-soft);
+  border: 1px solid var(--violet);
+  color: var(--violet);
+  margin: 24px auto;
+  padding: 14px 18px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+.retry {
+  background: none;
+  border: 0;
+  text-decoration: underline;
+  color: inherit;
+}

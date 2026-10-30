@@ -1,0 +1,64 @@
+.portrait {
+  position: relative;
+  overflow: hidden;
+  background: #d4b8c8;
+  aspect-ratio: 180/210;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.portrait svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sasha .hair {
+  fill: #6b4e8c;
+}
+
+.sasha .shirt {
+  fill: #2a3a42;
+}
+
+.lera {
+  background: #b7c9d8;
+}
+
+.lera .hair {
+  fill: #674632;
+}
+
+.lera .shirt {
+  fill: #e8896a;
+}
+
+.mark {
+  position: absolute;
+  bottom: 7px;
+  right: 10px;
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.small {
+  width: 83px;
+  border: 5px solid var(--paper);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  transform: rotate(-8deg);
+  margin-left: -20px;
+}
+
+.small.lera {
+  transform: rotate(8deg);
+}
+
+.small .mark {
+  display: none;
+}

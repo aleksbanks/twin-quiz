@@ -1,0 +1,12 @@
+.progress {
+  height: 3px;
+  background: var(--line);
+  margin-top: 18px;
+}
+
+.fill {
+  display: block;
+  background: var(--accent);
+  height: 100%;
+  transition: width 0.3s;
+}

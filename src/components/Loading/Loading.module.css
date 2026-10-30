@@ -1,0 +1,19 @@
+.loading {
+  padding: 150px 0;
+  text-align: center;
+  color: var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.mark {
+  margin: 0 auto;
+}
+
+.text {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}

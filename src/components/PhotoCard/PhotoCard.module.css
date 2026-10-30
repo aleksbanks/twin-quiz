@@ -1,0 +1,70 @@
+.card {
+  position: absolute;
+  background: var(--surface);
+  padding: 12px 12px 0;
+  width: 215px;
+  box-shadow: 0 12px 30px #30525c22;
+  border: 1px solid #ffffff;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: rotate(0deg) translateY(-6px);
+}
+
+.sasha {
+  top: 25px;
+  left: 10px;
+  transform: rotate(-9deg);
+  z-index: 1;
+}
+
+.lera {
+  right: -2px;
+  top: 110px;
+  transform: rotate(10deg);
+  z-index: 2;
+}
+
+.caption {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 27px;
+  padding: 11px 5px 14px;
+}
+
+@media (max-width: 950px) {
+  .card {
+    width: 190px;
+  }
+
+  .sasha {
+    left: -10px;
+  }
+
+  .lera {
+    right: -20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .card {
+    width: 155px;
+    padding: 8px 8px 0;
+  }
+
+  .sasha {
+    left: 20px;
+    top: 20px;
+  }
+
+  .lera {
+    right: 15px;
+    top: 65px;
+  }
+
+  .caption {
+    font-size: 23px;
+    padding: 8px 3px 11px;
+  }
+}

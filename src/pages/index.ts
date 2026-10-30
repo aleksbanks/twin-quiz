@@ -1,0 +1,4 @@
+export { Leaderboard } from './LeaderboardPage'
+export { Quiz } from './QuizPage'
+export { Result } from './ResultPage'
+export { Welcome } from './WelcomePage'

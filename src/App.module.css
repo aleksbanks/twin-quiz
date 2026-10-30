@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 62px;
+  box-sizing: border-box;
+}
+
+.main {
+  flex: 1;
+  outline: none;
+}
+
+@media (max-width: 950px) {
+  .site {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .site {
+    padding: 0 23px;
+  }
+}

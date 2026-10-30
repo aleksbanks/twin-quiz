@@ -1,0 +1,44 @@
+.result h1 {
+  margin-bottom: 20px;
+}
+
+.twinMini {
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.resultName {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.bigScore {
+  font-family: Manrope, sans-serif;
+  font-size: 100px;
+  letter-spacing: -7px;
+  line-height: 1.2;
+  color: var(--accent);
+}
+
+.bigScore span {
+  font-size: 34px;
+  letter-spacing: -1px;
+  color: var(--muted);
+}
+
+.cta {
+  margin: 25px auto 0;
+  min-width: 250px;
+}
+
+@media (max-width: 650px) {
+  .bigScore {
+    font-size: 90px;
+  }
+
+  .cta {
+    width: 100%;
+  }
+}
