@@ -5,7 +5,7 @@
 .primary {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
   border: 0;
   border-radius: 9px;
@@ -17,9 +17,14 @@
   letter-spacing: 0.02em;
   white-space: nowrap;
   min-height: 51px;
+  text-align: center;
   transition:
     background 0.2s,
     transform 0.2s;
+}
+
+.primary.withIcon {
+  justify-content: space-between;
 }
 
 .primary:hover:not(:disabled) {
@@ -34,16 +39,14 @@
 }
 
 .secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--line);
   border-radius: 9px;
   padding: 13px 20px;
   background: transparent;
   margin: 15px auto;
   color: var(--ink);
-}
-
-@media (max-width: 950px) {
-  .primary {
-    justify-content: space-between;
-  }
+  text-align: center;
 }

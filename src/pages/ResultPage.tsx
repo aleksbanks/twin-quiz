@@ -13,9 +13,10 @@ type ResultProps = {
   lang: Lang
   game: Game
   onViewBoard: () => void
+  onOpenGallery: () => void
 }
 
-export function Result({ texts, lang, game, onViewBoard }: ResultProps) {
+export function Result({ texts, lang, game, onViewBoard, onOpenGallery }: ResultProps) {
   const preferKeyboard = usePreferKeyboard()
   const ctaRef = useRef<HTMLButtonElement>(null)
 
@@ -38,13 +39,18 @@ export function Result({ texts, lang, game, onViewBoard }: ResultProps) {
         {game.score} {texts.out} {game.total}
       </MutedText>
       <DemoPill text={texts.badge} />
-      <Button
-        ref={ctaRef}
-        className={styles.cta}
-        endIcon={<Icon data={ArrowUpRight} size={18} />}
-        onClick={onViewBoard}>
-        {texts.view}
-      </Button>
+      <div className={styles.actions}>
+        <Button
+          ref={ctaRef}
+          className={styles.cta}
+          endIcon={<Icon data={ArrowUpRight} size={18} />}
+          onClick={onViewBoard}>
+          {texts.view}
+        </Button>
+        <Button variant='secondary' className={styles.galleryCta} onClick={onOpenGallery}>
+          {texts.galleryOpen}
+        </Button>
+      </div>
     </Panel>
   )
 }

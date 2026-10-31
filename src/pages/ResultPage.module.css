@@ -28,9 +28,20 @@
   color: var(--muted);
 }
 
-.cta {
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
   margin: 25px auto 0;
-  min-width: 250px;
+  max-width: 320px;
+}
+
+.cta,
+.galleryCta {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
 }
 
 @media (max-width: 650px) {
@@ -38,7 +49,7 @@
     font-size: 90px;
   }
 
-  .cta {
-    width: 100%;
+  .actions {
+    max-width: none;
   }
 }
