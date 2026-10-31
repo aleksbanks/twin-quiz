@@ -30,7 +30,15 @@ export default function App() {
     }
 
     if (showBoard) {
-      return <Leaderboard texts={texts} busy={busy} rows={rows} onBack={handleHideBoard} />
+      return (
+        <Leaderboard
+          texts={texts}
+          busy={busy}
+          rows={rows}
+          total={game?.total ?? 18}
+          onBack={handleHideBoard}
+        />
+      )
     }
 
     if (!game) {

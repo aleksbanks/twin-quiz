@@ -11,10 +11,11 @@ type LeaderboardProps = {
   texts: Copy
   busy: boolean
   rows: LeaderboardRow[]
+  total: number
   onBack: () => void
 }
 
-export function Leaderboard({ texts, busy, rows, onBack }: LeaderboardProps) {
+export function Leaderboard({ texts, busy, rows, total, onBack }: LeaderboardProps) {
   const preferKeyboard = usePreferKeyboard()
   const backButtonRef = useRef<HTMLButtonElement>(null)
 
@@ -40,7 +41,7 @@ export function Leaderboard({ texts, busy, rows, onBack }: LeaderboardProps) {
               <span className={styles.name}>{row.name}</span>
               <strong>
                 {row.score}
-                <small> / 17</small>
+                <small> / {total}</small>
               </strong>
             </li>
           ))}
