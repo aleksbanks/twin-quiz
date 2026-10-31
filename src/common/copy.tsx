@@ -42,7 +42,6 @@ export type Copy = {
   privacy: string
   blocked: string
   badge: string
-  photo: string
   skip: string
   keys: string
   language: string
@@ -63,12 +62,12 @@ export const copy: Record<Lang, Copy> = {
     name: 'What should we call you?',
     placeholder: 'Your name',
     start: 'Let’s find out',
-    note: '17 questions · One shot · A lot of lore', // TODO: Подумать сколько их будет
-    demo: 'WORK IN PROGRESS · Photos, answers & stories are placeholders',
+    note: '18 questions · One shot · A lot of lore',
+    demo: 'THE BIRTHDAY EDITION · Real stories · Real photos',
     sasha: 'Sasha',
     lera: 'Val',
     together: 'SASHA & VAL',
-    established: 'EST. TOGETHER · SINCE 01.11.1995',
+    established: 'EST. TOGETHER · SINCE 01 NOV 1995',
     editionDate: '01.11.2026',
     home: 'Sasha or Val home',
     question: 'QUESTION',
@@ -95,8 +94,7 @@ export const copy: Record<Lang, Copy> = {
     error: 'Something went wrong. Your progress is safe. Please try again.',
     privacy: 'Your progress stays with this browser. Close the tab and come back anytime.',
     blocked: 'Browser storage is unavailable. Enable it to keep your attempt.',
-    badge: 'Demo answers',
-    photo: 'PHOTO COMING SOON',
+    badge: 'True story',
     skip: 'Skip to content',
     keys: 'Keyboard: 1–2 to choose · Enter to lock in · arrows to move',
     language: 'Language'
@@ -115,12 +113,12 @@ export const copy: Record<Lang, Copy> = {
     name: 'Как тебя зовут?',
     placeholder: 'Твое имя',
     start: 'Давай проверим',
-    note: '17 вопросов · Одна попытка · Много лора',
-    demo: 'В РАЗРАБОТКЕ · Фото, ответы и истории — заглушки',
+    note: '18 вопросов · Одна попытка · Много лора',
+    demo: 'BIRTHDAY EDITION · Настоящие истории · Настоящие фото',
     sasha: 'Саша',
     lera: 'Лера',
     together: 'САША & ЛЕРА',
-    established: 'ВМЕСТЕ С 01.11.1995',
+    established: 'ВМЕСТЕ С 01 НОЯБ. 1995',
     editionDate: '01.11.2026',
     home: 'Саша или Лера — главная',
     question: 'ВОПРОС',
@@ -147,8 +145,7 @@ export const copy: Record<Lang, Copy> = {
     error: 'Не удалось связаться с сервером. Попробуй еще раз — прогресс сохранен.',
     privacy: 'Прогресс привязан к этому браузеру. Можно закрыть страницу и вернуться позже.',
     blocked: 'Хранилище браузера недоступно. Разреши его, чтобы сохранить попытку.',
-    badge: 'Тестовые ответы',
-    photo: 'ЗДЕСЬ БУДЕТ ФОТО',
+    badge: 'Правдивая история',
     skip: 'К содержимому',
     keys: 'Клавиатура: 1–2 — выбор · Enter — ответ · стрелки — переключение',
     language: 'Язык'

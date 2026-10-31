@@ -27,10 +27,14 @@
 }
 
 .caption {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: 27px;
-  padding: 11px 5px 14px;
+  font-family: Caveat, cursive;
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  padding: 10px 6px 12px;
+  color: var(--ink);
+  text-align: center;
 }
 
 @media (max-width: 950px) {
@@ -64,7 +68,7 @@
   }
 
   .caption {
-    font-size: 23px;
-    padding: 8px 3px 11px;
+    font-size: 28px;
+    padding: 8px 4px 10px;
   }
 }
