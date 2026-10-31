@@ -117,7 +117,7 @@ export function Quiz({ texts, lang, game, choice, busy, onChoice, onAnswer, onNe
                   label={personLabel(game.reveal.person, texts)}
                   mark={personMark(game.reveal.person, lang)}
                 />
-                <span>{texts.photo}</span>
+                <span className={styles.revealCaption}>{personLabel(game.reveal.person, texts)}</span>
               </div>
               <div className={styles.revealCopy}>
                 <Eyebrow>{texts.its}</Eyebrow>

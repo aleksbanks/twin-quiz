@@ -2,7 +2,7 @@
 
 Bilingual birthday quiz: React 19, TypeScript, Vite, CSS Modules, Supabase.
 
-Content (answers, stories, portraits) is still marked as work-in-progress in the UI. Replace and verify before the birthday launch.
+Questions and stories live in Supabase (`supabase/migrations/`). Apply all migrations in order on a fresh project.
 
 ## Stack
 
@@ -34,9 +34,7 @@ npm run dev
 
 1. Create a project at [supabase.com](https://supabase.com).
 2. **Authentication → Providers → Anonymous** — enable.
-3. Run migrations in **SQL Editor** (or `supabase link` + `supabase db push`):
-   - `supabase/migrations/202610300001_initial_quiz.sql`
-   - `supabase/migrations/202610300002_en_display_val.sql`
+3. Run migrations in **SQL Editor** (or `supabase link` + `supabase db push`), in filename order under `supabase/migrations/`.
 4. Copy **Project URL** and **publishable / anon** key into `.env.local`.
 5. Restart `npm run dev`.
 
@@ -52,9 +50,6 @@ npm run build
 npm run preview
 ```
 
-## Before launch
+## Content updates
 
-- Replace seeded answers and stories (new migration or edit seeds).
-- Replace portrait placeholders with real photos.
-- Keep the WIP banner until content is verified.
-- Prefer a clean Supabase project (or reset) so demo attempts do not lock guests.
+Add a new SQL migration under `supabase/migrations/`, run it in Supabase SQL Editor, then deploy the frontend if copy/UI changed.

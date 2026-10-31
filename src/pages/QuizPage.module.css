@@ -172,12 +172,15 @@
   transform: rotate(-4deg);
 }
 
-.revealPortrait > span {
+.revealCaption {
   display: block;
-  font-size: 7px;
+  font-family: Caveat, cursive;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.1;
   text-align: center;
-  padding: 9px 0 3px;
-  letter-spacing: 1px;
+  padding: 8px 4px 4px;
+  color: var(--ink);
 }
 
 .nextButton {
