@@ -1,6 +1,6 @@
 import { DemoBanner, ErrorAlert, Footer, Header, Loading, SkipLink, StorageBlocked } from 'components'
 import { useQuizApp } from 'hooks/useQuizApp'
-import { Leaderboard, Quiz, Result, Welcome } from 'pages'
+import { Gallery, Leaderboard, Quiz, Result, Welcome } from 'pages'
 import styles from './App.module.css'
 
 export default function App() {
@@ -14,12 +14,15 @@ export default function App() {
     error,
     storageOk,
     showBoard,
+    showGallery,
     rows,
     restore,
     handleLanguageChange,
     handleGameAction,
     handleShowBoard,
     handleHideBoard,
+    handleShowGallery,
+    handleHideGallery,
     handleChoice,
     handleNameChange
   } = useQuizApp()
@@ -27,6 +30,16 @@ export default function App() {
   function renderMain() {
     if (busy && !game && !showBoard) {
       return <Loading text={texts.loading} />
+    }
+
+    if (showGallery) {
+      return (
+        <Gallery
+          texts={texts}
+          backLabel={showBoard ? texts.galleryBack : texts.back}
+          onBack={handleHideGallery}
+        />
+      )
     }
 
     if (showBoard) {
@@ -37,6 +50,7 @@ export default function App() {
           rows={rows}
           total={game?.total ?? 18}
           onBack={handleHideBoard}
+          onOpenGallery={handleShowGallery}
         />
       )
     }
@@ -56,7 +70,15 @@ export default function App() {
     }
 
     if (game.done) {
-      return <Result texts={texts} lang={lang} game={game} onViewBoard={() => void handleShowBoard()} />
+      return (
+        <Result
+          texts={texts}
+          lang={lang}
+          game={game}
+          onViewBoard={() => void handleShowBoard()}
+          onOpenGallery={handleShowGallery}
+        />
+      )
     }
 
     return (
@@ -102,6 +124,8 @@ export default function App() {
           established={texts.established}
           editionDate={texts.editionDate}
           privacy={texts.privacy}
+          creditsParents={texts.creditsParents}
+          creditsSite={texts.creditsSite}
         />
       </div>
     </div>

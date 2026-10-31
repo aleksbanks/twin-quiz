@@ -15,6 +15,7 @@ export function useQuizApp() {
   const [error, setError] = useState<QuizError>('')
   const [storageOk, setStorageOk] = useState(true)
   const [showBoard, setShowBoard] = useState(false)
+  const [showGallery, setShowGallery] = useState(false)
   const [rows, setRows] = useState<LeaderboardRow[]>([])
 
   const texts = copy[lang]
@@ -83,7 +84,16 @@ export function useQuizApp() {
 
   function handleHideBoard() {
     setShowBoard(false)
+    setShowGallery(false)
     setError('')
+  }
+
+  function handleShowGallery() {
+    setShowGallery(true)
+  }
+
+  function handleHideGallery() {
+    setShowGallery(false)
   }
 
   function handleChoice(person: Person) {
@@ -104,12 +114,15 @@ export function useQuizApp() {
     error,
     storageOk,
     showBoard,
+    showGallery,
     rows,
     restore,
     handleLanguageChange,
     handleGameAction,
     handleShowBoard,
     handleHideBoard,
+    handleShowGallery,
+    handleHideGallery,
     handleChoice,
     handleNameChange
   }

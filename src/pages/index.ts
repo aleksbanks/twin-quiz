@@ -1,3 +1,4 @@
+export { Gallery } from './GalleryPage'
 export { Leaderboard } from './LeaderboardPage'
 export { Quiz } from './QuizPage'
 export { Result } from './ResultPage'

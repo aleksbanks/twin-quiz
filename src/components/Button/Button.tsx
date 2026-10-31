@@ -17,7 +17,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
     <button
       ref={ref}
       type={type}
-      className={cx(styles.button, variant === 'primary' ? styles.primary : styles.secondary, className)}
+      className={cx(
+        styles.button,
+        variant === 'primary' ? styles.primary : styles.secondary,
+        endIcon != null && styles.withIcon,
+        className
+      )}
       {...props}>
       {children}
       {endIcon != null && (

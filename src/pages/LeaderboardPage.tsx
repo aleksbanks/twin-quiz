@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { Button, DemoPill, Eyebrow, MutedText, Panel } from 'components'
+import { Button, Eyebrow, MutedText, Panel } from 'components'
 import type { LeaderboardRow } from 'api'
 import type { Copy } from 'common'
 import { useFocusElement } from 'hooks/useFocusElement'
@@ -13,9 +13,10 @@ type LeaderboardProps = {
   rows: LeaderboardRow[]
   total: number
   onBack: () => void
+  onOpenGallery: () => void
 }
 
-export function Leaderboard({ texts, busy, rows, total, onBack }: LeaderboardProps) {
+export function Leaderboard({ texts, busy, rows, total, onBack, onOpenGallery }: LeaderboardProps) {
   const preferKeyboard = usePreferKeyboard()
   const backButtonRef = useRef<HTMLButtonElement>(null)
 
@@ -30,7 +31,6 @@ export function Leaderboard({ texts, busy, rows, total, onBack }: LeaderboardPro
       <Eyebrow align='center'>THE TWINDEX / 2026</Eyebrow>
       <h1 id='leaderboard-title'>{texts.board}</h1>
       <MutedText>{texts.boardSub}</MutedText>
-      <DemoPill text={texts.badge} />
       {busy ? (
         <p role='status'>{texts.loading}</p>
       ) : rows.length ? (
@@ -49,9 +49,12 @@ export function Leaderboard({ texts, busy, rows, total, onBack }: LeaderboardPro
       ) : (
         <p className={styles.empty}>{texts.empty}</p>
       )}
-      <Button ref={backButtonRef} variant='secondary' onClick={onBack}>
-        {texts.back}
-      </Button>
+      <div className={styles.actions}>
+        <Button onClick={onOpenGallery}>{texts.galleryOpen}</Button>
+        <Button ref={backButtonRef} variant='secondary' onClick={onBack}>
+          {texts.back}
+        </Button>
+      </div>
     </Panel>
   )
 }
